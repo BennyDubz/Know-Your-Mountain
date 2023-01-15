@@ -1,0 +1,86 @@
+/Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=50349:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/benwilliams/Desktop/cs10/libs/openblas-macosx-x86_64.jar:/Users/benwilliams/Desktop/cs10/libs/opencv.jar:/Users/benwilliams/Desktop/cs10/libs/javacv.jar:/Users/benwilliams/Desktop/cs10/libs/opencv-macosx-x86_64.jar:/Users/benwilliams/Desktop/cs10/libs/json-simple-1.1.1.jar:/Users/benwilliams/Desktop/cs10/libs/net-datastructures-4-0.jar:/Users/benwilliams/Desktop/craig2-cs10/out/production/cs10 ps4.BaconDriver
+	Commands:
+	c <#>: list top (positive number) or bottom (negative) <#> centers of the universe, sorted by average separation
+	d <low> <high>: list actors sorted by degree, with degree between low and high
+	i: list actors with infinite separation from the current center
+	p <name>: find path from <name> to current center of the universe
+	s <low> <high>: list actors sorted by non-infinite separation from the current center, with separation between low and high
+	u <name>: make <name> the center of the universe
+	q: quit game
+
+	Kevin Bacon is now the center of the acting universe, connected to 5/7 actors with average separation 1.4
+wrong command 123
+
+	Invalid Input
+
+	Commands:
+	c <#>: list top (positive number) or bottom (negative) <#> centers of the universe, sorted by average separation
+	d <low> <high>: list actors sorted by degree, with degree between low and high
+	i: list actors with infinite separation from the current center
+	p <name>: find path from <name> to current center of the universe
+	s <low> <high>: list actors sorted by non-infinite separation from the current center, with separation between low and high
+	u <name>: make <name> the center of the universe
+	q: quit game
+c 5
+	Printing actors in descending order who have the most average separation when they are the center
+		Actor Dartmouth (Earl thereof) in place 0 with an average of 1.8 separations
+		Actor Kevin Bacon in place 1 with an average of 1.4 separations
+		Actor Bob in place 2 with an average of 1.0 separations
+		Actor Alice in place 3 with an average of 1.0 separations
+		Actor Charlie in place 4 with an average of 1.0 separations
+c -5
+	Printing actors in ascending order who have the least average separation when they are the center
+		Actor Charlie in place 4 with an average of 1.0 separations
+		Actor Alice in place 3 with an average of 1.0 separations
+		Actor Bob in place 2 with an average of 1.0 separations
+		Actor Kevin Bacon in place 1 with an average of 1.4 separations
+		Actor Dartmouth (Earl thereof) in place 0 with an average of 1.8 separations
+d -1 3
+	Actors sorted by degree between -1 and 3
+		Actor Kevin Bacon in place 0 with degree 2
+		Actor Nobody in place 1 with degree 1
+		Actor Nobody's Friend in place 2 with degree 1
+		Actor Dartmouth (Earl thereof) in place 3 with degree 1
+d -1 4
+	Actors sorted by degree between -1 and 4
+		Actor Bob in place 0 with degree 3
+		Actor Alice in place 1 with degree 3
+		Actor Charlie in place 2 with degree 3
+		Actor Kevin Bacon in place 3 with degree 2
+		Actor Nobody in place 4 with degree 1
+		Actor Nobody's Friend in place 5 with degree 1
+		Actor Dartmouth (Earl thereof) in place 6 with degree 1
+i
+
+	These Actors are unreachable from the current center of the universe:
+		Nobody
+		Nobody's Friend
+p Dartmouth (Earl thereof)
+
+	Dartmouth (Earl thereof)'s separation number is 3
+		Dartmouth (Earl thereof) played a role with Charlie in [B movie]
+		Charlie played a role with Bob in [C movie]
+		Bob played a role with Kevin Bacon in [A movie]
+p Alice
+
+	Alice's separation number is 1
+		Alice played a role with Kevin Bacon in [A movie, E movie]
+s 0 5
+	Sorting actors by degree of separation between 0 and 5
+		Actor Bob in place 0 with 1 separations from Kevin Bacon
+		Actor Alice in place 1 with 1 separations from Kevin Bacon
+		Actor Charlie in place 2 with 2 separations from Kevin Bacon
+		Actor Dartmouth (Earl thereof) in place 3 with 3 separations from Kevin Bacon
+u Charlie
+
+	Charlie is now the center of the acting universe, connected to 5/7 actors with average separation 1.0
+p Kevin Bacon
+
+	Kevin Bacon's separation number is 2
+		Kevin Bacon played a role with Bob in [A movie]
+		Bob played a role with Charlie in [C movie]
+q
+
+	Game Closed
+
+Process finished with exit code 0
