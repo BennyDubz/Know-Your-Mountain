@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -77,19 +79,29 @@ public class LearnLabelPanel extends JPanel {
         titleLabel.setBorder(new LineBorder(Color.black));
         titleLabel.setFont(new Font(titleLabel.getFont().getFontName(), Font.BOLD, 15));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        titleLabel.setOpaque(true);
+        titleLabel.setBackground(new Color(220,220,220));
 
         promptPanel = new JPanel();
         promptPanel.setLayout(new GridBagLayout());
         promptLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
-        promptLabel.setBorder(new LineBorder(Color.black));
+        //promptLabel.setBorder(new LineBorder(Color.black));
+        promptLabel.setBorder(new CompoundBorder(new LineBorder(Color.BLACK), new EmptyBorder(5,5,5,5)));
         promptLabel.setMaximumSize(new Dimension(220,200));
+        promptLabel.setOpaque(true);
+        promptLabel.setBackground(new Color(220,220,220));
+        promptLabel.setMaximumSize(new Dimension(200, 50));
+
+
         promptLabel.setFont(new Font(promptLabel.getFont().getFontName(), Font.BOLD, 14));
         promptPanel.add(promptLabel);
 
         scoreLabel.setBorder(new LineBorder(Color.black));
         scoreLabel.setFont(new Font(scoreLabel.getFont().getFontName(), Font.BOLD, 15));
         scoreLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        scoreLabel.setOpaque(true);
+        scoreLabel.setBackground(new Color(220,220,220));
 
         //titleLabel.
         //titleLabel.setBorder(new CompoundBorder(new EmptyBorder(titleLabel.getX(), titleLabel.getY(), )));
@@ -248,7 +260,13 @@ public class LearnLabelPanel extends JPanel {
             currLevel.namelessDrawMC(g);
 
             if (indexChanged) {
-                promptLabel.setText("<html>Click on:<br/> " + currLevel.getSolutionsMC().get(indexMC).getName() + "</html>");
+                String name = currLevel.getSolutionsMC().get(indexMC).getName();
+//                if (name.length() >= 24) { // edge case
+//                    promptLabel.setText("Click on:");
+//                } else {
+//
+//                }
+                promptLabel.setText("<html><p>Click on:<br/> " + name + "</p></html>");
                 indexChanged = false;
             }
 

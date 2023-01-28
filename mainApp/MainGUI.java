@@ -46,7 +46,7 @@ public class MainGUI extends JFrame {
     private appMode aMode = appMode.TITLE;
 
     public MainGUI() throws IOException {
-        super("Know Your Mountain v1.0");
+        super("Know Your Mountain v1.1");
         this.setResizable(false); // Hopefully I can change this later, but I want to actually work on the application first
 
         this.emptyMapImage = ImageIO.read(getClass().getResource("emptyMountain.png"));
