@@ -115,6 +115,7 @@ public class LearnLabelPanel extends JPanel {
         indexMC = 0;
         score = 0;
         scoreOutOf = 0;
+        indexChanged = true;
         incrementScoreLabel();
         LD.currLevel.shuffleSolution();
 
@@ -132,7 +133,6 @@ public class LearnLabelPanel extends JPanel {
             titleLabel.setText("Cumulative");
             currLevel.hide();
         }
-
     }
 
     public void levelChange() {
@@ -142,6 +142,7 @@ public class LearnLabelPanel extends JPanel {
         score = 0;
         indexMC = 0;
         scoreOutOf = 0;
+        indexChanged = true;
         incrementScoreLabel();
     }
 
