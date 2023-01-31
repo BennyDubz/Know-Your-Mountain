@@ -1,0 +1,8 @@
+v1.2
+Fixed a bug where the "Click on: name" would not change after changing modes/areas, despite a new set of solutions being in place
+--
+v1.1
+Changed the background of many of the JLabels/text fields to make their text more visible, most notable during "learn"
+--
+v1.0
+Original Release
