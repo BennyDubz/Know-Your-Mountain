@@ -116,6 +116,8 @@ public class LearnLabelPanel extends JPanel {
         score = 0;
         scoreOutOf = 0;
         indexChanged = true;
+        correctLimbo = false;
+        incorrectLimbo = false;
         incrementScoreLabel();
         LD.currLevel.shuffleSolution();
 
