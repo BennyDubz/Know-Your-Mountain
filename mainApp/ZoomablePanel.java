@@ -91,8 +91,10 @@ public class ZoomablePanel extends JPanel implements MouseWheelListener, MouseLi
             }
 
             at.translate(xOffset + xDiff, yOffset + yDiff);
+
             if (zoomFactor != 1) at.scale(zoomFactor, zoomFactor);
             g2.transform(at);
+
             if (released) {
 
                 xOffset += xDiff;
@@ -117,6 +119,7 @@ public class ZoomablePanel extends JPanel implements MouseWheelListener, MouseLi
 
         zoomer = true;
         //Tweaked to add max zooms
+
         //Zoom in
         if (e.getWheelRotation() < 0 && zoomFactor <= 6) {
             zoomFactor *= 1.1;
