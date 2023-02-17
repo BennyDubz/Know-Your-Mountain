@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/*.jar'
+          path: '${{ github.workspace }}/out/artifacts/KnowYourMountain_jar/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
