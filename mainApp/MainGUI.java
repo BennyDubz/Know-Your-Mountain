@@ -290,6 +290,7 @@ public class MainGUI extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
+        System.setProperty("java.awt.headless", "true");
 //        BufferedImage emptyMapImage = ImageIO.read(new File("Assets/emptyMountain.png"));
 //        //BufferedImage emptyMapImage = ImageIO.read(new File(MainGUI.class.getResource("Assets/emptyMountain.png").getPath()));
 //        BufferedImage fullMapImage = ImageIO.read(new File("Assets/original.png"));
