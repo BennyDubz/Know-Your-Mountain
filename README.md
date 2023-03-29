@@ -1,6 +1,16 @@
 # Know-Your-Mountain
 ### Author: Ben Williams
 
+## Application Link
+
+https://drive.google.com/drive/folders/11I0_m-CfJF30GS_jmDE0nsGHRaGPEpsz?usp=sharing
+
+Github doesn't allow me to have files this large on here, so you can download them from my Drive. 
+
+The Mac version has a .dmg you can download
+
+The Windows version is untested, but download the whole folder
+
 ## Purpose
 
 I developed this application for my dad, who is a member of the Jackson Hole Ski Patrol. He is a doctor by trade, and is only able to work on the mountain once a week. This program is designed to help him and his coworkers to become more familiar with the Ski Patrol's map of the mountain.  
